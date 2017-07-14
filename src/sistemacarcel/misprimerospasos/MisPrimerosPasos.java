@@ -5,11 +5,28 @@
  */
 package sistemacarcel.misprimerospasos;
 
+import sistemacarcel.bloque.Bloque;
+
 /**
  *
  * @author User
  */
 public class MisPrimerosPasos {
+    public Bloque bloque;
+
+    public MisPrimerosPasos() {
+        this.bloque = new Bloque();
+    }
     public void redistribuirPresos(){
+    }
+    
+    public void agregarBloque(String numeroBloque, int carcelId){
+        bloque.registrarBloque(numeroBloque,carcelId);
+    }    
+    public void eliminarBloque(int bloqueId){
+        bloque.eliminarBloque(bloqueId);
+    }
+    public void editarBloque(int bloqueId) {
+       bloque.editarBloque(bloqueId);
     }
 }

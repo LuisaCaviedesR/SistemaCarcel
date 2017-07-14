@@ -27,20 +27,24 @@ public class CarcelFacade {
     public void cambiarPresoCelda(){
       
     }
-    public void registrarBloque(){
-        
+    public void registrarBloque(MisPrimerosPasos misprimerospasos){
+       String bloque = "B1";
+       int carcel    = 1;
+       misprimerospasos.agregarBloque(bloque,carcel);
     }
-    public void eliminarBloque(){
-        
+    public void eliminarBloque(MisPrimerosPasos misprimerospasos){
+       int bloqueId = 1;
+       misprimerospasos.eliminarBloque(bloqueId);
     }
-    public void editarBloque(){
-       
+    public void editarBloque(MisPrimerosPasos misprimerospasos){
+       int bloqueId = 1;
+       misprimerospasos.editarBloque(bloqueId);
     }
     public void registarPatio(){
        
     }    
     public void redistribuirPresos(){
-        
+        misprimerospasos.redistribuirPresos();
     }    
     public void registrarCelda(){
        

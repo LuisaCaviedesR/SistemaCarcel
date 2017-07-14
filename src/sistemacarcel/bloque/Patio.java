@@ -30,8 +30,5 @@ public class Patio extends Bloque{
     /*
      * Patron Composite
      */
-    @Override
-    public void registrarBloque(){
-        
-    }
+    
 }

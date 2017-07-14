@@ -11,17 +11,4 @@ package sistemacarcel.bloque;
  */
 public class BloqueComposite extends Bloque{
   
-   @Override
-   public void registrarBloque(){
-    
-    }
-    
-   @Override
-    public void editarBloque(){
-    
-    }
-    @Override
-    public void eliminarBloque(){
-    
-    }
 }

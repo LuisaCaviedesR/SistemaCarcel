@@ -9,7 +9,7 @@ import sistemacarcel.bloque.Bloque;
  *
  * @author User
  */
-public class Celda extends Bloque{
+public class Celda extends Bloque {
     private CeldaState estado;
     public int capacidad;
     public int cantidadActual;
@@ -44,13 +44,7 @@ public class Celda extends Bloque{
     
     public void eliminarCelda(){
         
-    }
+    } 
     
-    /*
-     * Patron Composite
-     */
-    @Override
-    public void registrarBloque(){
-        
-    }
+    
 }

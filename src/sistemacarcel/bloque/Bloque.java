@@ -11,17 +11,18 @@ package sistemacarcel.bloque;
  */
 public class Bloque {
     public String numeroBloque;
+    public int carcelId;
     
-    public void registrarBloque(){
-    
+    public void registrarBloque(String numeroBloque, int carcelId){
+        System.out.println("Creando Bloque : "+numeroBloque+"de la carcel" +carcelId);
     }
     
-    public void editarBloque(){
-    
+    public void editarBloque(int bloqueId){
+         System.out.println("Editando Bloque : "+bloqueId);
     }
     
-    public void eliminarBloque(){
-    
+    public void eliminarBloque(int bloqueId){
+         System.out.println("Eliminando Bloque : "+bloqueId);
     }
     
 }
