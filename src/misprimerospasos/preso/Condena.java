@@ -6,6 +6,7 @@
 package misprimerospasos.preso;
 
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  *
@@ -15,6 +16,8 @@ public class Condena {
     private ArrayList<String> condenas = new ArrayList<>();
     private static Condena instancia;
     public enum tipoCondena{CONDENA1,CONDENA2};
+    public Date fechaInicioCondena;
+    public Date fechaFinCondena;
     
     public Condena(){
         

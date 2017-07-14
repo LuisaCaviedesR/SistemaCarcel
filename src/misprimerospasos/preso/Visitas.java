@@ -5,11 +5,18 @@
  */
 package misprimerospasos.preso;
 
+import java.sql.Time;
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  *
  * @author User
  */
 public class Visitas {
+    public Date fechaVisita;
+    public Time horaVisita;
+    public ArrayList<String> visitas = new ArrayList<>();
     
     public void registrarVisita(){
     }
