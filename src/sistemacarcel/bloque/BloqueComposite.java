@@ -3,25 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package misprimerospasos.bloque;
+package sistemacarcel.bloque;
 
 /**
  *
  * @author User
  */
-public class Bloque {
-    public String numeroBloque;
-    
-    public void registrarBloque(){
+public class BloqueComposite extends Bloque{
+  
+   @Override
+   public void registrarBloque(){
     
     }
     
+   @Override
     public void editarBloque(){
     
     }
-    
+    @Override
     public void eliminarBloque(){
     
     }
-    
 }

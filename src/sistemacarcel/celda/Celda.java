@@ -3,8 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package misprimerospasos.celda;
-import misprimerospasos.bloque.Bloque;
+package sistemacarcel.celda;
+import sistemacarcel.bloque.Bloque;
 /**
  *
  * @author User

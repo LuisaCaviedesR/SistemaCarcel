@@ -1,2 +1,0 @@
-misprimerospasos.celda.DisponibleState
-misprimerospasos.DisponibleState

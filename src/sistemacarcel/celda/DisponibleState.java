@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package misprimerospasos.celda;
+package sistemacarcel.celda;
 
 /**
  *
  * @author User
  */
-public class FullState implements CeldaState{
+public class DisponibleState implements CeldaState {
 
     @Override
     public void asignarPresoCelda() {
-        System.out.println("No es posible asignar presos a esta celda se encuentra con su capacidad maxima"); 
+        System.out.println("Preso Asignado a la Celda, estado actual +1");        
     }
 
     @Override
     public void cambiarPresoCelda() {
-        System.out.println("Preso ha sido reubicado a otra celda,  estado actual -1");  
+        System.out.println("Preso ha sido reubicado a otra celda,  estado actual -1"); 
     }
 
     @Override
