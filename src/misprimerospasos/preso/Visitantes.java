@@ -13,7 +13,7 @@ public class Visitantes {
     public String nombreVisitante;
     public String apellidosVisitante;
     public String identificacionVisitante;
-    public enum tipoVisitante{familiar,amigo};
+    public enum tipoVisitante{FAMILIAR,AMIGO};
     
     public void registrarVisitante(){
     }

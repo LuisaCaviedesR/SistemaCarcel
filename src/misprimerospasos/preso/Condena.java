@@ -14,6 +14,7 @@ import java.util.ArrayList;
 public class Condena {
     private ArrayList<String> condenas = new ArrayList<>();
     private static Condena instancia;
+    public enum tipoCondena{CONDENA1,CONDENA2};
     
     public Condena(){
         
