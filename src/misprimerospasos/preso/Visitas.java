@@ -11,4 +11,7 @@ package misprimerospasos.preso;
  */
 public class Visitas {
     
+    public void registrarVisita(){
+    }
+    
 }

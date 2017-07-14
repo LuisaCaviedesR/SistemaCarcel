@@ -10,5 +10,16 @@ package misprimerospasos.preso;
  * @author User
  */
 public class Visitantes {
+    public String nombreVisitante;
+    public String apellidosVisitante;
+    public String identificacionVisitante;
+    public enum tipoVisitante{familiar,amigo};
+    
+    public void registrarVisitante(){
+    }
+    public void actualizarVisitante(){
+    }
+    public void relacionarconPresos(){
+    }
     
 }
