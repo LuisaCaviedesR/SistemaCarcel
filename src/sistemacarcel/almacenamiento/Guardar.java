@@ -5,10 +5,12 @@
  */
 package sistemacarcel.almacenamiento;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author User
  */
 public interface Guardar {
-    
+    public void guardar(ArrayList informacion);
 }

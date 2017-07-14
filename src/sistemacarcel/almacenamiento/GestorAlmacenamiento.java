@@ -5,10 +5,23 @@
  */
 package sistemacarcel.almacenamiento;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author User
  */
-public class GestorAlmacenamiento {
+public class GestorAlmacenamiento implements Guardar{
+
+    @Override
+    public void guardar(ArrayList informacion) {
+        
+        if(AdministrarConexion.Conexion){
+            new GuardarRemoto().guardar(informacion);
+        }
+        else{
+            new GuardarLocal().guardar(informacion);
+        }
+    }
     
 }

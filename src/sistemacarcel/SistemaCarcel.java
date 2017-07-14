@@ -5,6 +5,9 @@
  */
 package sistemacarcel;
 
+import java.util.ArrayList;
+import sistemacarcel.almacenamiento.GestorAlmacenamiento;
+
 
 
 /**
@@ -18,6 +21,9 @@ public class SistemaCarcel {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        GestorAlmacenamiento almacenarInformacion = new GestorAlmacenamiento();
+        ArrayList informacion = new ArrayList();
+        almacenarInformacion.guardar(informacion);
     }
     
 }

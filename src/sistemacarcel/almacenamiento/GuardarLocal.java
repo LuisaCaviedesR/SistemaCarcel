@@ -5,10 +5,17 @@
  */
 package sistemacarcel.almacenamiento;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author User
  */
-public class GuardarLocal {
+public class GuardarLocal implements Guardar{
+
+    @Override
+    public void guardar(ArrayList informacion) {
+        System.out.println("Guardando información local.");
+    }
     
 }

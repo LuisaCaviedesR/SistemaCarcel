@@ -5,10 +5,17 @@
  */
 package sistemacarcel.almacenamiento;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author User
  */
-public class GuardarRemoto {
+public class GuardarRemoto implements Guardar{
+
+    @Override
+    public void guardar(ArrayList informacion) {
+         System.out.println("Guardando informacion de manera remota.");
+    }
     
 }
