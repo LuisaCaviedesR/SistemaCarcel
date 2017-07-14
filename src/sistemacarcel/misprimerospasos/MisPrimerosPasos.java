@@ -10,5 +10,6 @@ package sistemacarcel.misprimerospasos;
  * @author User
  */
 public class MisPrimerosPasos {
-    
+    public void redistribuirPresos(){
+    }
 }

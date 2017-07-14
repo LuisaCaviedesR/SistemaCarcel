@@ -4,12 +4,6 @@
  * and open the template in the editor.
  */
 package sistemacarcel;
-
-import java.util.ArrayList;
-import sistemacarcel.almacenamiento.GestorAlmacenamiento;
-
-
-
 /**
  *
  * @author User
@@ -21,9 +15,7 @@ public class SistemaCarcel {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        GestorAlmacenamiento almacenarInformacion = new GestorAlmacenamiento();
-        ArrayList informacion = new ArrayList();
-        almacenarInformacion.guardar(informacion);
+        
     }
     
 }
