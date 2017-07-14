@@ -15,7 +15,7 @@ public class Preso {
     public String nombres;
     public String apellidos;
     public String identificacion;
-    private final ArrayList<String> presos = new ArrayList<>();
+    private ArrayList<String> presos = new ArrayList<>();
     private static Preso instancia;
     
     public Preso(){
