@@ -14,7 +14,10 @@ public class Celda extends Bloque {
     public int capacidad;
     public int cantidadActual;
     public String numeroCelda;
-    
+
+    public Celda(String numeroBloque, int carcelId) {
+        super(numeroBloque, carcelId);
+    }
     /*
      *Implementación de Patrón State
      */
@@ -45,6 +48,29 @@ public class Celda extends Bloque {
     public void eliminarCelda(){
         
     } 
-    
+
+   /*
+     * Patron Composite
+     */
+
+    @Override
+    public void mostrarBloque(int x) {
+       System.out.println("mostrando informacion bloque "); 
+    }  
+
+    @Override
+    public void registrarBloque(Bloque bloque) {
+        System.out.println("no puedo registrar bloque "); 
+    }
+
+    @Override
+    public void editarBloque(Bloque bloque) {
+         System.out.println("no puedo editar bloque "); 
+    }
+
+    @Override
+    public void eliminarBloque(Bloque bloque) {
+         System.out.println("no puedo eliminar bloque "); 
+    }
     
 }

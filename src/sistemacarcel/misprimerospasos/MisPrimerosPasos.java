@@ -5,37 +5,26 @@
  */
 package sistemacarcel.misprimerospasos;
 
-import sistemacarcel.bloque.Bloque;
+import sistemacarcel.bloque.BloqueComposite;
+import sistemacarcel.bloque.Patio;
+import sistemacarcel.celda.Celda;
 
 /**
  *
  * @author User
  */
 public class MisPrimerosPasos {
-    private static MisPrimerosPasos instancia;   
-    public Bloque bloque;
+    Celda celda;
+    Patio patio;
+    BloqueComposite bloqueComposite;
 
     public MisPrimerosPasos() {
-        this.bloque = new Bloque();
+        this.bloqueComposite = new BloqueComposite();
+        this.patio = new Patio();
+        this.celda = new Celda();
     }
-    
-    public static MisPrimerosPasos getMisPrimerosPasos(){
-        if(instancia == null){
-            instancia = new MisPrimerosPasos();
-        }
-        return instancia;
-    }
-    
-    public void redistribuirPresos(){
-    }
-    
-    public void agregarBloque(String numeroBloque, int carcelId){
-        bloque.registrarBloque(numeroBloque,carcelId);
-    }    
-    public void eliminarBloque(int bloqueId){
-        bloque.eliminarBloque(bloqueId);
-    }
-    public void editarBloque(int bloqueId) {
-       bloque.editarBloque(bloqueId);
+    public void agregarBloque(){
+       bloqueComposite.registrarBloque(celda);
+       
     }
 }

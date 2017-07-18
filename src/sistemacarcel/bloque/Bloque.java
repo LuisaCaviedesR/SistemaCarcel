@@ -9,20 +9,17 @@ package sistemacarcel.bloque;
  *
  * @author User
  */
-public class Bloque {
-    public String numeroBloque;
-    public int carcelId;
+public abstract class Bloque {
+    protected String numeroBloque;
+    protected int carcelId;
     
-    public void registrarBloque(String numeroBloque, int carcelId){
-        System.out.println("Creando Bloque : "+numeroBloque+"de la carcel" +carcelId);
+    public Bloque(String numeroBloque, int carcelId) {
+        this.numeroBloque = numeroBloque;
+        this.carcelId     = carcelId;
     }
     
-    public void editarBloque(int bloqueId){
-         System.out.println("Editando Bloque : "+bloqueId);
-    }
-    
-    public void eliminarBloque(int bloqueId){
-         System.out.println("Eliminando Bloque : "+bloqueId);
-    }
-    
+    public abstract void registrarBloque(Bloque bloque);    
+    public abstract void editarBloque(Bloque bloque);
+    public abstract void  eliminarBloque(Bloque bloque);
+    public abstract void mostrarBloque(int x);  
 }
