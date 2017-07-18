@@ -31,7 +31,7 @@ public class Celda extends Bloque {
         estado.cambiarPresoCelda();
     }
     public void liberarCupo(){
-        estado.asignarPresoCelda();
+        estado.liberarCupo();
     }
     
     /*

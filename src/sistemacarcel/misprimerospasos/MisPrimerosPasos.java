@@ -8,12 +8,13 @@ package sistemacarcel.misprimerospasos;
 import sistemacarcel.bloque.BloqueComposite;
 import sistemacarcel.bloque.Patio;
 import sistemacarcel.celda.Celda;
+import sistemacarcel.celda.Observer;
 
 /**
  *
  * @author User
  */
-public class MisPrimerosPasos {
+public class MisPrimerosPasos implements Observer {
     Celda celda;
     Patio patio;
     BloqueComposite bloqueComposite;
@@ -25,7 +26,17 @@ public class MisPrimerosPasos {
     }
     public void agregarBloque(){
        bloqueComposite.registrarBloque(celda);
-       bloqueComposite.registrarBloque(patio);
-       
+       bloqueComposite.registrarBloque(patio);       
+    } 
+
+    @Override
+    public void update() {
+        System.out.println("En caso de hacinamiento redistribuirCupos");
+        this.redistribuirPresos();
     }
+    
+    public void redistribuirPresos(){
+         System.out.println("Redistribuir presos");
+    }
+    
 }

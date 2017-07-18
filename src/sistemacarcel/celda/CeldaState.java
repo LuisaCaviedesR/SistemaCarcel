@@ -10,9 +10,17 @@ package sistemacarcel.celda;
  * @author User
  */
 public interface CeldaState {
-    
+    /*
+     * patrón state
+    */
     public void asignarPresoCelda();
     public void cambiarPresoCelda();
     public void liberarCupo();
+    /*
+     * patrón observer
+    */
+    public void notificarObserver();
+    public void registrarObserver(Observer observer);
+    public void quitarObserver(Observer observer);
     
 }
