@@ -19,12 +19,13 @@ public class MisPrimerosPasos {
     BloqueComposite bloqueComposite;
 
     public MisPrimerosPasos() {
-        this.bloqueComposite = new BloqueComposite();
-        this.patio = new Patio();
-        this.celda = new Celda();
+        this.bloqueComposite = new BloqueComposite("B1",1);
+        this.patio = new Patio("B1",1);
+        this.celda = new Celda("B1",1);
     }
     public void agregarBloque(){
        bloqueComposite.registrarBloque(celda);
+       bloqueComposite.registrarBloque(patio);
        
     }
 }
