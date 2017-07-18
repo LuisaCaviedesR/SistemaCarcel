@@ -12,11 +12,20 @@ import sistemacarcel.bloque.Bloque;
  * @author User
  */
 public class MisPrimerosPasos {
+    private static MisPrimerosPasos instancia;   
     public Bloque bloque;
 
     public MisPrimerosPasos() {
         this.bloque = new Bloque();
     }
+    
+    public static MisPrimerosPasos getMisPrimerosPasos(){
+        if(instancia == null){
+            instancia = new MisPrimerosPasos();
+        }
+        return instancia;
+    }
+    
     public void redistribuirPresos(){
     }
     

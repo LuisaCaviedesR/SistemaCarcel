@@ -9,9 +9,7 @@ package sistemacarcel.reportes;
  *
  * @author User
  */
-public class ConcreteReporteVisitasPresos {
+public class ConcreteReporteVisitasPresos extends ReporteVisitasPresos{
 
-    public ConcreteReporteVisitasPresos() {
-    }
     
 }

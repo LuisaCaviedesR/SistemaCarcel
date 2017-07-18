@@ -18,12 +18,12 @@ public class HacinamientoState implements CeldaState {
 
     @Override
     public void cambiarPresoCelda() {
-        System.out.println("Preso ha sido reubicado a otra celda,  estado actual -1");  
+        System.out.println("Preso ha sido reubicado a otra celda, estado actual -1");  
     }
 
     @Override
     public void liberarCupo() {
-        System.out.println("La celda ha quedado con un cupo libre , estado actual -1"); 
+        System.out.println("La celda ha quedado con un cupo libre, estado actual -1"); 
     }
     
 }

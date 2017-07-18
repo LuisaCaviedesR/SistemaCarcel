@@ -9,7 +9,6 @@ package sistemacarcel.reportes;
  *
  * @author User
  */
-public interface ReportePresos {
+public abstract class ReportePresos {
     
-    public void reportePresosBloque();
 }    

@@ -9,13 +9,7 @@ package sistemacarcel.reportes;
  *
  * @author User
  */
-public class ConcreteReporteCondenaPreso implements ReporteCondenaPreso {
+public class ConcreteReporteCondenaPreso extends ReporteCondenaPreso {
 
-    @Override
-    public void reporteCondenaPreso() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    
-    
+      
 }

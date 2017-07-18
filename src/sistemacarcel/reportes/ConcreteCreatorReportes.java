@@ -12,22 +12,26 @@ package sistemacarcel.reportes;
 public class ConcreteCreatorReportes extends CreatorReportes  {
 
     @Override
-    public ReportePresos reportePresos() {
-         return new ConcreteReportePresos();
+    public void reportePresos() {
+        System.out.println(super.consulta1);
+        System.out.println(super.consulta2);
     }    
 
     @Override
-    public ReporteVisitas reporteVisitas() {
-        return new ConcreteReporteVisitas();
+    public void reporteVisitas() {
     }
 
     @Override
-    public ReporteCondenaPreso reporteCondenaPreso() {
-       return new ConcreteReporteCondenaPreso();
+    public void reporteCondenaPreso() {
     }
 
     @Override
-    public ReporteVisitasPresos reporteVisitasPresos() {
-        return new ConcreteReporteVisitasPresos();
+    public void reporteVisitasPresos() {
     }
 }
+
+/*   @Override
+    public void reportePresosBloque() {
+        //todo implementar la lógica  del reporte.
+       System.out.println("Lista de presos por bloque");
+    }*/

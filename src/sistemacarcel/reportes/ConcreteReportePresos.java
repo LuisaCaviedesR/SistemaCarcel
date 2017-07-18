@@ -9,13 +9,6 @@ package sistemacarcel.reportes;
  *
  * @author User
  */
-public class ConcreteReportePresos implements ReportePresos{
-
-    @Override
-    public void reportePresosBloque() {
-        //todo implementar la lógica  del reporte.
-       System.out.println("Lista de presos por bloque");
-    }
-
-    
+public class ConcreteReportePresos extends ReportePresos{
+   
 }

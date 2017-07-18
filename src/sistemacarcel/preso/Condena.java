@@ -29,8 +29,4 @@ public class Condena {
         }
         return instancia;
     }
-    
-    public void registrarCondena(){
-        
-    }
 }

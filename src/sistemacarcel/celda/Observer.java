@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sistemacarcel.reportes;
+package sistemacarcel.celda;
 
 /**
  *
- * @author User
+ * @author Tefa Marin
  */
-public class ConcreteReporteVisitas extends ReporteVisitas {
-
-        
+public interface Observer {
+    public void update();
+    
 }
