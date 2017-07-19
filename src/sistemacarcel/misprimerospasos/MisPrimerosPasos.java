@@ -8,17 +8,14 @@ package sistemacarcel.misprimerospasos;
 import sistemacarcel.bloque.BloqueComposite;
 import sistemacarcel.bloque.Patio;
 import sistemacarcel.celda.Celda;
-<<<<<<< HEAD
 import sistemacarcel.reportes.CreatorReportes;
-=======
-import sistemacarcel.celda.Observer;
->>>>>>> 1cc4149d2ad157e71aa1cfe9bf46f9f37ae08406
+
 
 /**
  *
  * @author User
  */
-public class MisPrimerosPasos implements Observer {
+public class MisPrimerosPasos {
     Celda celda;
     Patio patio;
     BloqueComposite bloqueComposite;
@@ -28,15 +25,11 @@ public class MisPrimerosPasos implements Observer {
         this.bloqueComposite = new BloqueComposite("B1",1);
         this.patio = new Patio("B1",1);
         this.celda = new Celda("B1",1);
-<<<<<<< HEAD
         creadorReportes = new CreatorReportes();
-=======
->>>>>>> 1cc4149d2ad157e71aa1cfe9bf46f9f37ae08406
     }
     public void agregarBloque(){
        bloqueComposite.registrarBloque(celda);
        bloqueComposite.registrarBloque(patio);       
-<<<<<<< HEAD
     }
     
     public void verReportes(String tipoReporte){
@@ -46,10 +39,9 @@ public class MisPrimerosPasos implements Observer {
         creadorReportes.crearReporteVisitas();
         creadorReportes.crearReporteVisitasPresos();
     }      
-=======
-    } 
+ 
 
-    @Override
+   /* @Override
     public void update() {
         System.out.println("En caso de hacinamiento redistribuirCupos");
         this.redistribuirPresos();
@@ -57,7 +49,7 @@ public class MisPrimerosPasos implements Observer {
     
     public void redistribuirPresos(){
          System.out.println("Redistribuir presos");
-    }
+    }*/
     
->>>>>>> 1cc4149d2ad157e71aa1cfe9bf46f9f37ae08406
+
 }

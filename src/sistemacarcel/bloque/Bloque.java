@@ -5,6 +5,9 @@
  */
 package sistemacarcel.bloque;
 
+import java.util.ArrayList;
+import sistemacarcel.celda.Celda;
+
 /**
  *
  * @author User
@@ -12,6 +15,7 @@ package sistemacarcel.bloque;
 public abstract class Bloque {
     protected String numeroBloque;
     protected int carcelId;
+    protected ArrayList<Celda> celdas = new ArrayList();
     
     public Bloque(String numeroBloque, int carcelId) {
         this.numeroBloque = numeroBloque;

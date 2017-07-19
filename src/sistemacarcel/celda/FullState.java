@@ -25,19 +25,4 @@ public class FullState implements CeldaState{
     public void liberarCupo() {
         System.out.println("La celda ha quedado con un cupo libre , estado actual -1"); 
     }
-    
-    @Override
-    public void notificarObserver() {
-         System.out.println("No notifico Observer");  
-    }
-
-    @Override
-    public void registrarObserver(Observer observer) {
-         System.out.println("No registro Observer");  
-    }
-
-    @Override
-    public void quitarObserver(Observer observer) {
-        System.out.println("No elimino Observer");     
-    }
 }

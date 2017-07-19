@@ -5,16 +5,12 @@
  */
 package sistemacarcel.celda;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author User
  */
 public class HacinamientoState implements CeldaState {
     
-    private static ArrayList<Observer> observadores = new ArrayList<>();
-
     @Override
     public void asignarPresoCelda() {
         System.out.println("Existe Hacinamiento en esta Celda");
@@ -28,22 +24,5 @@ public class HacinamientoState implements CeldaState {
     @Override
     public void liberarCupo() {
         System.out.println("La celda ha quedado con un cupo libre, estado actual -1"); 
-    }
-    
-    @Override
-    public void notificarObserver() {
-        for (int i = 0; i < observadores.size(); i++) {
-            observadores.get(i).update();
-        }  
-    }
-
-    @Override
-    public void registrarObserver(Observer observer) {
-        observadores.add(observer);  
-    }
-
-    @Override
-    public void quitarObserver(Observer observer) {
-        observadores.remove(observer);  
     }
 }

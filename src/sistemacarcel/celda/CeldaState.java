@@ -15,12 +15,5 @@ public interface CeldaState {
     */
     public void asignarPresoCelda();
     public void cambiarPresoCelda();
-    public void liberarCupo();
-    /*
-     * patrón observer
-    */
-    public void notificarObserver();
-    public void registrarObserver(Observer observer);
-    public void quitarObserver(Observer observer);
-    
+    public void liberarCupo();    
 }
