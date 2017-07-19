@@ -28,14 +28,17 @@ public class CarcelFacade {
         almacenamientoInformacion.guardar(datos); */
     }
        
-    public void gestionarCelda(){      
+    public void gestionarCelda(){
+        misprimerospasos.gestionarCelda();
     }    
     public void gestionarBloque(){
         misprimerospasos.gestionarBloque();
     }
     public void gestionarPatio(){
+        misprimerospasos.gestionarPatio();
     }  
     public void gestionarPresos(){
+        misprimerospasos.gestionarPresos();
     }
     
     public void VerReportes(){        
