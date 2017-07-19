@@ -28,34 +28,14 @@ public class CarcelFacade {
         almacenamientoInformacion.guardar(datos); */
     }
        
-    public void asignarPresoCelda(){      
-    }
-    
-    public void cambiarPresoCelda(){  
-    }
-    
-    public void registrarBloque(){   
-    }
-    
-    public void eliminarBloque(){   
-    }
-    
-    public void editarBloque(){   
-    }
-    
-    public void registarPatio(){
+    public void gestionarCelda(){      
     }    
-    
-    public void redistribuirPresos(){
-    }    
-    
-    public void registrarCelda(){
-    }    
-    
-    public void editarCelda(){
+    public void gestionarBloque(){
+        misprimerospasos.gestionarBloque();
     }
-    
-    public void eliminarCelda(){      
+    public void gestionarPatio(){
+    }  
+    public void gestionarPresos(){
     }
     
     public void VerReportes(){        
