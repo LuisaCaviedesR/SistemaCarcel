@@ -9,7 +9,20 @@ package sistemacarcel.reportes;
  *
  * @author User
  */
-public class ConcreteReporteVisitas extends ReporteVisitas {
+public abstract class Consultas {
 
-        
+    String sql;
+
+    public Consultas(String sql) {
+        this.sql = sql;
+    }
+
+    public String getSql() {
+        return sql;
+    }
+
+    public void setSql(String sql) {
+        this.sql = sql;
+    }   
 }
+

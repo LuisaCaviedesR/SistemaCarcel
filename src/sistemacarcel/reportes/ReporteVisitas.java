@@ -9,6 +9,11 @@ package sistemacarcel.reportes;
  *
  * @author User
  */
-public abstract class ReporteVisitas {
+public class ReporteVisitas extends Reporte{
+
+    @Override
+    public void crearReporte() {
+        consultas.add(new ConsultaVisitas("Select * from Visitas"));
+    }
     
 }

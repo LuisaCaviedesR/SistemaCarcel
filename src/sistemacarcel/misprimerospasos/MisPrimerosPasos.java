@@ -8,6 +8,7 @@ package sistemacarcel.misprimerospasos;
 import sistemacarcel.bloque.BloqueComposite;
 import sistemacarcel.bloque.Patio;
 import sistemacarcel.celda.Celda;
+import sistemacarcel.reportes.CreatorReportes;
 
 /**
  *
@@ -17,14 +18,24 @@ public class MisPrimerosPasos {
     Celda celda;
     Patio patio;
     BloqueComposite bloqueComposite;
-
+    CreatorReportes creadorReportes;
+    
     public MisPrimerosPasos() {
-        this.bloqueComposite = new BloqueComposite();
-        this.patio = new Patio();
-        this.celda = new Celda();
+        this.bloqueComposite = new BloqueComposite("B1",1);
+        this.patio = new Patio("B1",1);
+        this.celda = new Celda("B1",1);
+        creadorReportes = new CreatorReportes();
     }
     public void agregarBloque(){
        bloqueComposite.registrarBloque(celda);
-       
+       bloqueComposite.registrarBloque(patio);       
     }
+    
+    public void verReportes(String tipoReporte){
+        /*if o switch para que dependiendo del parametro se llame el reporte xyz*/
+        creadorReportes.crearReportePresos();
+        creadorReportes.crearReporteCondenaPresos();
+        creadorReportes.crearReporteVisitas();
+        creadorReportes.crearReporteVisitasPresos();
+    }      
 }

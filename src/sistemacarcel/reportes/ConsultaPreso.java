@@ -9,7 +9,13 @@ package sistemacarcel.reportes;
  *
  * @author User
  */
-public class ConcreteReporteVisitasPresos extends ReporteVisitasPresos{
+public class ConsultaPreso extends Consultas {
 
-    
+    public ConsultaPreso(String sql) {
+        super(sql);
+    }
+
+   
+      
+   
 }

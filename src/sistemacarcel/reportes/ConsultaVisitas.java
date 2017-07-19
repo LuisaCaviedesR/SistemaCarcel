@@ -9,11 +9,13 @@ package sistemacarcel.reportes;
  *
  * @author User
  */
-public class ReporteVisitasPresos extends Reporte{
+public class ConsultaVisitas extends Consultas{
+   
+    public ConsultaVisitas(String sql) {
+        super(sql);
+    }
+   
+   
 
-    @Override
-    public void crearReporte() {
-        consultas.add(new ConsultaPreso("Select * from Presos"));
-        consultas.add(new ConsultaVisitas("Select * from Visitas"));
-    }   
+      
 }
