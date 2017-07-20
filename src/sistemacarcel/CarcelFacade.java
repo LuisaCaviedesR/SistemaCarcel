@@ -15,6 +15,8 @@ import sistemacarcel.noloharedenuevo.NoLoHareDeNuevo;
  */
 public class CarcelFacade {
     
+    NoLoHareDeNuevo  noloharedenuevo = new NoLoHareDeNuevo();
+    static MisPrimerosPasos misprimerospasos = new MisPrimerosPasos();
     public static void muestraMenu(){
         StringBuffer menu = new StringBuffer();
         menu.append("---------------------------------\n");
@@ -25,9 +27,6 @@ public class CarcelFacade {
     }
     
     public static void main(String[] args) {
-        MisPrimerosPasos misprimerospasos = new MisPrimerosPasos();
-        NoLoHareDeNuevo  noloharedenuevo = new NoLoHareDeNuevo();
-                
         String opcionReporte;
         Scanner entradaDatos = new Scanner(System.in);
         do{
@@ -49,7 +48,16 @@ public class CarcelFacade {
         }while(opcionReporte != "0");     
     }
        
-        
-        
-        
+    public void gestionarCelda(){
+        misprimerospasos.gestionarCelda();
+    }    
+    public void gestionarBloque(){
+        misprimerospasos.gestionarBloque();
+    }
+    public void gestionarPatio(){
+        misprimerospasos.gestionarPatio();
+    }  
+    public void gestionarPresos(){
+        misprimerospasos.gestionarPresos();
+    }
 }
