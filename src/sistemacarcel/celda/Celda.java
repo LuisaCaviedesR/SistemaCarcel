@@ -54,7 +54,7 @@ public class Celda extends Bloque {
      */
 
     @Override
-    public void mostrarBloque(int x) {
+    public void mostrarBloque() {
        System.out.println("mostrando informacion bloque "); 
     }  
 

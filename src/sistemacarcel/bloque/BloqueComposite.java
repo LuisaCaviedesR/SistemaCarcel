@@ -33,11 +33,20 @@ public class BloqueComposite extends Bloque{
     @Override
     public void eliminarBloque(Bloque bloque) {
         bloques.remove(bloque);
+        System.out.println("Eliminando elemento");
     }
 
     @Override
-    public void mostrarBloque(int x) {
-       System.out.println("mostrando informacion bloque "); 
+    public void mostrarBloque() {    
+        if (bloques.size()>0){
+            System.out.println("mostrando información bloques "); 
+            for (int i = 0; i < bloques.size(); i++) {
+                System.out.println(i + " " + bloques.get(i).numeroBloque);
+            }
+            
+        }else{
+            System.out.println("No existen bloques");
+        }
     }
   
 }

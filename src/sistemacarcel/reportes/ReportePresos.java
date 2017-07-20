@@ -13,8 +13,6 @@ public class ReportePresos extends Reporte{
 
     @Override
     public void crearReporte() {
-        System.out.println("crearReporte");
         consultas.add(new ConsultaPreso("Select * from Presos"));
-        System.out.println("lista consultas" + consultas.get(0));
     }    
 }    

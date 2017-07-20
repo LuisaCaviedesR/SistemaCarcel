@@ -52,10 +52,10 @@ public class MisPrimerosPasos {
                 bloqueComposite.eliminarBloque(bloqueComposite);
                 break;
             case "show":
-                bloqueComposite.mostrarBloque(1);
+                bloqueComposite.mostrarBloque();
                 break;
             default:
-                bloqueComposite.mostrarBloque(1);
+                bloqueComposite.mostrarBloque();
                 break;
         }
     }
