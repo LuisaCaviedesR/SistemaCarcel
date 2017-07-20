@@ -47,6 +47,6 @@ public class BloqueComposite extends Bloque{
         }else{
             System.out.println("No existen bloques");
         }
-    }
+    }    
   
 }

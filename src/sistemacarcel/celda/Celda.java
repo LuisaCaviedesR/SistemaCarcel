@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package sistemacarcel.celda;
+import java.util.ArrayList;
 import sistemacarcel.bloque.Bloque;
 /**
  *
@@ -14,9 +15,16 @@ public class Celda extends Bloque {
     public int capacidad;
     public int cantidadActual;
     public String numeroCelda;
+    public String numeroBlo;
+    private ArrayList<Celda> celdas = new ArrayList<>();
 
-    public Celda(String numeroBloque, int carcelId) {
+
+    public Celda(String numeroBloque, int carcelId, int capacidad, int cantidadActual, String numeroCelda) {
         super(numeroBloque, carcelId);
+        this.cantidadActual = cantidadActual;
+        this.capacidad      = capacidad;
+        this.numeroCelda    = numeroCelda;
+        this.numeroBlo      = numeroBloque;
     }
     /*
      *Implementación de Patrón State
@@ -37,17 +45,31 @@ public class Celda extends Bloque {
     /*
      * CRUD entidad Celda
      */
-    public void registrarCelda(){
-        
+    public void registrarCelda(Celda celda){
+         celdas.add(celda);
+         System.out.println("Registro elemento");
     }
     
-    public void editarCelda(){
-        
+    public void editarCelda(Celda celda){
+       System.out.println("Editando elemento");
     }
     
-    public void eliminarCelda(){
-        
+    public void eliminarCelda(Celda celda){
+        celdas.remove(celda);
+        System.out.println("Eliminando elemento");
     } 
+    
+    public void mostrarCelda() {
+       if (celdas.size()>0){
+            System.out.println("mostrando información celdas "); 
+            for (int i = 1; i <= celdas.size(); i++) {
+                System.out.println(i + " " + celdas.get(i).numeroCelda);
+            }
+            
+        }else{
+            System.out.println("No existen bloques");
+        }
+    }
 
    /*
      * Patron Composite
@@ -72,5 +94,7 @@ public class Celda extends Bloque {
     public void eliminarBloque(Bloque bloque) {
          System.out.println("no puedo eliminar bloque "); 
     }
+
+    
     
 }

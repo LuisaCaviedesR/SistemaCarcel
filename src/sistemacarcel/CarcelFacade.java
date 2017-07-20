@@ -60,7 +60,6 @@ public class CarcelFacade {
                         opcionBloque=entradaDatos.nextLine();
                         switch(opcionBloque){
                             case "1": misprimerospasos.gestionarBloque("add");
-
                                 break;
                             case "2": misprimerospasos.gestionarBloque("edit");
                                 break;

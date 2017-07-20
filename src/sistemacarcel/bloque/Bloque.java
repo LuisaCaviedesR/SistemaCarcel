@@ -24,6 +24,6 @@ public abstract class Bloque {
     
     public abstract void registrarBloque(Bloque bloque);    
     public abstract void editarBloque(Bloque bloque);
-    public abstract void  eliminarBloque(Bloque bloque);
+    public abstract void eliminarBloque(Bloque bloque);
     public abstract void mostrarBloque();  
 }

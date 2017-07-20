@@ -30,7 +30,7 @@ public class MisPrimerosPasos {
     public MisPrimerosPasos() {
         creadorReportes = new CreatorReportes();
         bloqueComposite = new BloqueComposite("B1",1);
-        celda           = new Celda("B1",1);
+        celda           = new Celda("B1",1,4,0,"C1");
         patio           = new Patio("B1",1);
         preso           = new Preso();
         this.reportes = new ArrayList<Reporte>();
@@ -60,10 +60,24 @@ public class MisPrimerosPasos {
         }
     }
     
-    public void gestionarCelda() {
-        celda.registrarCelda();
-        celda.editarCelda();
-        celda.eliminarCelda();
+    public void gestionarCelda(String action) {
+        switch(action){
+            case "add":
+                celda.registrarCelda(celda);
+                break;
+            case "edit":
+                celda.editarCelda(celda);
+                break;
+            case "delete":
+                celda.eliminarCelda(celda);
+                break;
+            case "show":
+                celda.mostrarCelda();
+                break;
+            default:
+                celda.mostrarCelda();
+                break;
+        }       
     }
 
     public void gestionarPatio() {
