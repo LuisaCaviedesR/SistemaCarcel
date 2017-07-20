@@ -22,17 +22,20 @@ public class CarcelFacade {
     }
     
     public static void main(String[] args) {
-        // TODO code application logic here  
+        // TODO code application logic here 
+        MisPrimerosPasos misprimerospasos;
+        misprimerospasos = new MisPrimerosPasos();
         /*GestorAlmacenamiento almacenamientoInformacion = new GestorAlmacenamiento();
         ArrayList datos = new ArrayList();
         almacenamientoInformacion.guardar(datos); */
+        misprimerospasos.gestionarBloque("add");
     }
        
     public void gestionarCelda(){
         misprimerospasos.gestionarCelda();
     }    
-    public void gestionarBloque(){
-        misprimerospasos.gestionarBloque();
+    public void gestionarBloque(String action){
+        misprimerospasos.gestionarBloque(action);
     }
     public void gestionarPatio(){
         misprimerospasos.gestionarPatio();

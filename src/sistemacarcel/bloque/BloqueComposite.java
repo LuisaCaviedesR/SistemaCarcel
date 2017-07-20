@@ -22,6 +22,7 @@ public class BloqueComposite extends Bloque{
     @Override
     public void registrarBloque(Bloque bloque) {
          bloques.add(bloque);
+         System.out.println("Registro elemento");
     }
 
     @Override

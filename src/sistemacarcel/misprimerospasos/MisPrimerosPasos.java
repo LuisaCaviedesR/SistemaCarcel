@@ -30,11 +30,29 @@ public class MisPrimerosPasos {
         patio           = new Patio("B1",1);
         preso           = new Preso();
     }
-    public void gestionarBloque(){
-        bloqueComposite.registrarBloque(bloqueComposite);
-        bloqueComposite.editarBloque(bloqueComposite);
-        bloqueComposite.eliminarBloque(bloqueComposite);
-        bloqueComposite.mostrarBloque(1);
+
+    /**
+     *
+     * @param action
+     */
+    public void gestionarBloque(String action){
+        switch(action){
+            case "add":
+                bloqueComposite.registrarBloque(bloqueComposite);
+                break;
+            case "edit":
+                bloqueComposite.editarBloque(bloqueComposite);
+                break;
+            case "delete":
+                bloqueComposite.eliminarBloque(bloqueComposite);
+                break;
+            case "show":
+                bloqueComposite.mostrarBloque(1);
+                break;
+            default:
+                bloqueComposite.mostrarBloque(1);
+                break;
+        }
     }
     
     public void gestionarCelda() {
