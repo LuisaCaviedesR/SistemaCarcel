@@ -5,10 +5,13 @@
  */
 package sistemacarcel.misprimerospasos;
 
+import java.util.ArrayList;
 import sistemacarcel.bloque.BloqueComposite;
 import sistemacarcel.bloque.Patio;
 import sistemacarcel.celda.Celda;
+import sistemacarcel.reportes.Consultas;
 import sistemacarcel.reportes.CreatorReportes;
+import sistemacarcel.reportes.Reporte;
 
 
 /**
@@ -20,24 +23,46 @@ public class MisPrimerosPasos {
     Patio patio;
     BloqueComposite bloqueComposite;
     CreatorReportes creadorReportes;
+    ArrayList<Reporte> reportes;
     
     public MisPrimerosPasos() {
         this.bloqueComposite = new BloqueComposite("B1",1);
         this.patio = new Patio("B1",1);
         this.celda = new Celda("B1",1);
         creadorReportes = new CreatorReportes();
+        this.reportes = new ArrayList<Reporte>();
     }
+    
     public void agregarBloque(){
        bloqueComposite.registrarBloque(celda);
        bloqueComposite.registrarBloque(patio);       
     }
     
     public void verReportes(String tipoReporte){
-        /*if o switch para que dependiendo del parametro se llame el reporte xyz*/
-        creadorReportes.crearReportePresos();
-        creadorReportes.crearReporteCondenaPresos();
-        creadorReportes.crearReporteVisitas();
-        creadorReportes.crearReporteVisitasPresos();
+        System.out.println("variable tiporeporte: " + tipoReporte);
+        switch(tipoReporte){
+            case "Presos":
+                reportes.add(creadorReportes.crearReportePresos());                
+                break;
+            case "CondenaPresos":
+                //creadorReportes.crearReporteCondenaPresos();
+                reportes.add(creadorReportes.crearReporteCondenaPresos());
+                break;
+            case "Visitas":
+                //creadorReportes.crearReporteVisitas();
+                reportes.add(creadorReportes.crearReporteVisitas());
+                break;
+            case "VisitasPresos":
+                //creadorReportes.crearReporteVisitasPresos();
+                reportes.add(creadorReportes.crearReporteVisitasPresos());
+                break;
+        } 
+        for (Reporte reporte : reportes) {
+            System.out.println("\n--"+reporte.getClass().getSimpleName()+"--");
+            for (Consultas consulta : reporte.consultas) {
+                System.out.println(" "+consulta.getSql());
+            }
+        }
     }      
  
 

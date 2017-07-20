@@ -5,6 +5,7 @@
  */
 package sistemacarcel;
 
+import java.util.Scanner;
 import sistemacarcel.misprimerospasos.MisPrimerosPasos;
 import sistemacarcel.noloharedenuevo.NoLoHareDeNuevo;
 
@@ -13,52 +14,42 @@ import sistemacarcel.noloharedenuevo.NoLoHareDeNuevo;
  * @author User
  */
 public class CarcelFacade {
-    private MisPrimerosPasos misprimerospasos;
-    private NoLoHareDeNuevo  noloharedenuevo;
-        
-    public CarcelFacade(MisPrimerosPasos misprimerospasos,NoLoHareDeNuevo noloharedenuevo) {
-        this.misprimerospasos = misprimerospasos;
-        this.noloharedenuevo  = noloharedenuevo;
+    
+    public static void muestraMenu(){
+        StringBuffer menu = new StringBuffer();
+        menu.append("---------------------------------\n");
+        menu.append("SELECCIONE EL TIPO DE REPORTE\n");
+        menu.append("1. Presos 2. CondenaPresos 3.Visitas 4.VisitasPresos 0.Salir\n");
+        menu.append("---------------------------------\n");
+        System.out.println(menu.toString());
     }
     
     public static void main(String[] args) {
-        // TODO code application logic here  
-        /*GestorAlmacenamiento almacenamientoInformacion = new GestorAlmacenamiento();
-        ArrayList datos = new ArrayList();
-        almacenamientoInformacion.guardar(datos); */
+        MisPrimerosPasos misprimerospasos = new MisPrimerosPasos();
+        NoLoHareDeNuevo  noloharedenuevo = new NoLoHareDeNuevo();
+                
+        String opcionReporte;
+        Scanner entradaDatos = new Scanner(System.in);
+        do{
+            muestraMenu();
+            opcionReporte=entradaDatos.nextLine();
+            switch(opcionReporte){
+                case "1": misprimerospasos.verReportes("Presos");
+                        break;
+                case "2": misprimerospasos.verReportes("CondenaPresos");
+                        break;
+                case "3": misprimerospasos.verReportes("Visitas");
+                        break;
+                case "4": misprimerospasos.verReportes("VisitasPresos");
+                        break;
+                case "0": System.exit(0);
+                default: System.out.println("Error. opción no válida");
+                         break;
+            }
+        }while(opcionReporte != "0");     
     }
        
-    public void asignarPresoCelda(){      
-    }
-    
-    public void cambiarPresoCelda(){  
-    }
-    
-    public void registrarBloque(){   
-    }
-    
-    public void eliminarBloque(){   
-    }
-    
-    public void editarBloque(){   
-    }
-    
-    public void registarPatio(){
-    }    
-    
-    public void redistribuirPresos(){
-    }    
-    
-    public void registrarCelda(){
-    }    
-    
-    public void editarCelda(){
-    }
-    
-    public void eliminarCelda(){      
-    }
-    
-    public void VerReportes(){        
-        //misprimerospasos.verReportes(tipoReporte);
-    }
+        
+        
+        
 }

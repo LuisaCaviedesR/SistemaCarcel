@@ -15,6 +15,7 @@ public class CreatorReportes {
     }
     
     public Reporte crearReportePresos(){
+        System.out.println("crearReportePresos");
         return new ReportePresos();
     }
     

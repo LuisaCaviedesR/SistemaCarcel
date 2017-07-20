@@ -13,9 +13,10 @@ import java.util.ArrayList;
  */
 public abstract class Reporte{
     
-    protected ArrayList<Consultas> consultas = new ArrayList();
+    public ArrayList<Consultas> consultas = new ArrayList();
 
     public Reporte() {
+        this.crearReporte();
     }
 
     public ArrayList<Consultas> getConsultas() {
