@@ -5,6 +5,7 @@
  */
 package sistemacarcel;
 
+import java.util.Scanner;
 import sistemacarcel.misprimerospasos.MisPrimerosPasos;
 import sistemacarcel.noloharedenuevo.NoLoHareDeNuevo;
 
@@ -13,22 +14,38 @@ import sistemacarcel.noloharedenuevo.NoLoHareDeNuevo;
  * @author User
  */
 public class CarcelFacade {
-    private MisPrimerosPasos misprimerospasos;
-    private NoLoHareDeNuevo  noloharedenuevo;
-        
-    public CarcelFacade(MisPrimerosPasos misprimerospasos,NoLoHareDeNuevo noloharedenuevo) {
-        this.misprimerospasos = misprimerospasos;
-        this.noloharedenuevo  = noloharedenuevo;
+    
+    NoLoHareDeNuevo  noloharedenuevo = new NoLoHareDeNuevo();
+    static MisPrimerosPasos misprimerospasos = new MisPrimerosPasos();
+    public static void muestraMenu(){
+        StringBuffer menu = new StringBuffer();
+        menu.append("---------------------------------\n");
+        menu.append("SELECCIONE EL TIPO DE REPORTE\n");
+        menu.append("1. Presos 2. CondenaPresos 3.Visitas 4.VisitasPresos 0.Salir\n");
+        menu.append("---------------------------------\n");
+        System.out.println(menu.toString());
     }
     
     public static void main(String[] args) {
-        // TODO code application logic here 
-        MisPrimerosPasos misprimerospasos;
-        misprimerospasos = new MisPrimerosPasos();
-        /*GestorAlmacenamiento almacenamientoInformacion = new GestorAlmacenamiento();
-        ArrayList datos = new ArrayList();
-        almacenamientoInformacion.guardar(datos); */
-        misprimerospasos.gestionarBloque("add");
+        String opcionReporte;
+        Scanner entradaDatos = new Scanner(System.in);
+        do{
+            muestraMenu();
+            opcionReporte=entradaDatos.nextLine();
+            switch(opcionReporte){
+                case "1": misprimerospasos.verReportes("Presos");
+                        break;
+                case "2": misprimerospasos.verReportes("CondenaPresos");
+                        break;
+                case "3": misprimerospasos.verReportes("Visitas");
+                        break;
+                case "4": misprimerospasos.verReportes("VisitasPresos");
+                        break;
+                case "0": System.exit(0);
+                default: System.out.println("Error. opción no válida");
+                         break;
+            }
+        }while(opcionReporte != "0");     
     }
        
     public void gestionarCelda(){
@@ -42,9 +59,5 @@ public class CarcelFacade {
     }  
     public void gestionarPresos(){
         misprimerospasos.gestionarPresos();
-    }
-    
-    public void VerReportes(){        
-        //misprimerospasos.verReportes(tipoReporte);
     }
 }

@@ -5,11 +5,14 @@
  */
 package sistemacarcel.misprimerospasos;
 
+import java.util.ArrayList;
 import sistemacarcel.bloque.BloqueComposite;
 import sistemacarcel.bloque.Patio;
 import sistemacarcel.celda.Celda;
+import sistemacarcel.reportes.Consultas;
 import sistemacarcel.preso.Preso;
 import sistemacarcel.reportes.CreatorReportes;
+import sistemacarcel.reportes.Reporte;
 
 
 /**
@@ -21,6 +24,7 @@ public class MisPrimerosPasos {
     BloqueComposite bloqueComposite;
     Celda celda;
     Patio patio;
+    ArrayList<Reporte> reportes;
     Preso preso;
     
     public MisPrimerosPasos() {
@@ -29,8 +33,9 @@ public class MisPrimerosPasos {
         celda           = new Celda("B1",1);
         patio           = new Patio("B1",1);
         preso           = new Preso();
+        this.reportes = new ArrayList<Reporte>();
     }
-
+    
     /**
      *
      * @param action
@@ -74,11 +79,27 @@ public class MisPrimerosPasos {
     
     
     public void verReportes(String tipoReporte){
-        /*if o switch para que dependiendo del parametro se llame el reporte xyz*/
-        creadorReportes.crearReportePresos();
-        creadorReportes.crearReporteCondenaPresos();
-        creadorReportes.crearReporteVisitas();
-        creadorReportes.crearReporteVisitasPresos();
+        System.out.println("variable tiporeporte: " + tipoReporte);
+        switch(tipoReporte){
+            case "Presos":
+                reportes.add(creadorReportes.crearReportePresos());                
+                break;
+            case "CondenaPresos":
+                reportes.add(creadorReportes.crearReporteCondenaPresos());
+                break;
+            case "Visitas":
+                reportes.add(creadorReportes.crearReporteVisitas());
+                break;
+            case "VisitasPresos":
+                reportes.add(creadorReportes.crearReporteVisitasPresos());
+                break;
+        } 
+        for (Reporte reporte : reportes) {
+            System.out.println("\n--"+reporte.getClass().getSimpleName()+"--");
+            for (Consultas consulta : reporte.consultas) {
+                System.out.println(" "+consulta.getSql());
+            }
+        }
     }      
  
     

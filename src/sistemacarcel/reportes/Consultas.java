@@ -12,6 +12,9 @@ package sistemacarcel.reportes;
 public abstract class Consultas {
 
     String sql;
+    
+    public Consultas() {
+    }
 
     public Consultas(String sql) {
         this.sql = sql;
