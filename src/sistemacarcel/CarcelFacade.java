@@ -102,19 +102,19 @@ public class CarcelFacade {
                         muestraMenuCelda();
                         opcionCelda=entradaDatosCelda.nextLine();
                         switch(opcionCelda){
-                            case "1": misprimerospasos.gestionarBloque("Adicionar");
+                            case "1": misprimerospasos.gestionarCelda("Adicionar");
                                 break;
-                            case "2": misprimerospasos.gestionarBloque("Editar");
+                            case "2": misprimerospasos.gestionarCelda("Editar");
                                 break;
-                            case "3": misprimerospasos.gestionarBloque("Eliminar");
+                            case "3": misprimerospasos.gestionarCelda("Eliminar");
                                 break;
-                            case "4": misprimerospasos.gestionarBloque("Mostrar");
+                            case "4": misprimerospasos.gestionarCelda("Mostrar");
                                 break;
-                            case "5": misprimerospasos.gestionarBloque("AsignarPreso");
+                            case "5": misprimerospasos.gestionarCelda("AsignarPreso");
                                 break;
-                            case "6": misprimerospasos.gestionarBloque("CambiarPreso");
+                            case "6": misprimerospasos.gestionarCelda("CambiarPreso");
                                 break;
-                            case "7": misprimerospasos.gestionarBloque("LiberarCupo");
+                            case "7": misprimerospasos.gestionarCelda("LiberarCupo");
                                 break;
                             case "0": 
                                 break;
