@@ -12,10 +12,10 @@ import sistemacarcel.bloque.Bloque;
  */
 public class Celda extends Bloque {
     private CeldaState estado;
-    public int capacidad;
-    public int cantidadActual;
-    public String numeroCelda;
-    public String numeroBlo;
+    protected int capacidad;
+    protected int cantidadActual;
+    protected String numeroCelda;
+    protected String numeroBlo;
     private ArrayList<Celda> celdas = new ArrayList<>();
 
 
@@ -62,10 +62,9 @@ public class Celda extends Bloque {
     public void mostrarCelda() {
        if (celdas.size()>0){
             System.out.println("mostrando información celdas "); 
-            for (int i = 1; i <= celdas.size(); i++) {
-                System.out.println(i + " " + celdas.get(i).numeroCelda);
-            }
-            
+            for (int i = 0; i < celdas.size(); i++) {
+                System.out.println(i + " " + celdas.get(i).numeroCelda + " "+celdas.get(i).capacidad);
+            }            
         }else{
             System.out.println("No existen bloques");
         }

@@ -15,11 +15,11 @@ public class Preso {
     public String nombres;
     public String apellidos;
     public String identificacion;
+    public String numCelda;
     private ArrayList<String> presos = new ArrayList<>();
     private static Preso instancia;
     
-    public Preso(){
-        
+    public Preso(){        
     }
     
     public static Preso getPreso(){
@@ -30,6 +30,7 @@ public class Preso {
     }
     
     public void crearPreso(){
+        
     }
     
     public void registrarCondenaPreso(){
