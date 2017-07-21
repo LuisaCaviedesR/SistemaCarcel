@@ -74,7 +74,6 @@ public class MisPrimerosPasos {
     
     public void gestionarCelda(String action) {
         CeldaState estado = celda.getEstado();
-         
         switch(action){
             case "Adicionar":
                   celda.registrarCelda(celda);
@@ -89,7 +88,11 @@ public class MisPrimerosPasos {
                 celda.mostrarCelda();
                 break;
             case "AsignarPreso":
-                celda.asignarPresoCelda();
+                if (estado.getClass().getSimpleName().equals("HacinamientoState")){
+                    redistribuirCupo();
+                }else{
+                    celda.asignarPresoCelda();
+                }                
                 break;
             case "CambiarPreso":
                 celda.cambiarPresoCelda();
@@ -104,8 +107,9 @@ public class MisPrimerosPasos {
     }
     
     public void redistribuirCupo(){
-        System.out.println("Se debe redistribuirCupo de la Celda");
+        System.out.println("Se debe redistribuir Cupo de la Celda");
     }
+    
     public void gestionarPatio(String action) {
         switch(action){ 
             case "Adicionar":

@@ -25,7 +25,7 @@ public class Celda extends Bloque {
         this.capacidad      = capacidad;
         this.numeroCelda    = numeroCelda;
         this.numeroBlo      = numeroBloque;
-        this.estado         = new FullState();
+        this.estado         = new HacinamientoState();
     }
 
     /*
