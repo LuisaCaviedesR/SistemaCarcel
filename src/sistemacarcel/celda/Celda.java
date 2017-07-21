@@ -33,6 +33,9 @@ public class Celda extends Bloque {
     public void setEstado(CeldaState e){
         estado=e;
     }
+    public CeldaState getEstado() {
+        return estado;
+    }
     public void asignarPresoCelda(){
         estado.asignarPresoCelda();
     }

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import sistemacarcel.bloque.BloqueComposite;
 import sistemacarcel.bloque.Patio;
 import sistemacarcel.celda.Celda;
+import sistemacarcel.celda.CeldaState;
 import sistemacarcel.celda.DisponibleState;
 import sistemacarcel.celda.FullState;
 import sistemacarcel.celda.HacinamientoState;
@@ -74,8 +75,8 @@ public class MisPrimerosPasos {
     public void gestionarCelda(String action) {
         switch(action){
             case "Adicionar":
-                celda.registrarCelda(celda);
-                break;
+                  celda.registrarCelda(celda);
+                  break;
             case "Editar":
                 celda.editarCelda(celda);
                 break;
@@ -99,7 +100,10 @@ public class MisPrimerosPasos {
                 break;
         }       
     }
-
+    
+    public void redistribuirCupo(){
+        System.out.println("Se debe redistribuirCupo de la Celda");
+    }
     public void gestionarPatio(String action) {
         switch(action){ 
             case "Adicionar":
