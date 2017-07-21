@@ -85,6 +85,12 @@ public class MisPrimerosPasos {
             case "Mostrar":
                 celda.mostrarCelda();
                 break;
+            case "AsignarPreso":
+                celda.asignarPresoCelda();
+            case "CambiarPreso":
+                celda.cambiarPresoCelda();
+            case "LiberarCupo":
+                celda.liberarCupo();
             default:
                 celda.mostrarCelda();
                 break;
@@ -130,27 +136,5 @@ public class MisPrimerosPasos {
                 System.out.println(" "+consulta.getSql());
             }
         }
-    }      
-    
-    //Celda alarma = new Celda(numeroBloque, 0, 0, 0, numeroCelda);
-        HacinamientoState hacinam = new HacinamientoState();
-        DisponibleState dispo = new DisponibleState();
-        FullState full = new FullState();
-        
-    public void estado(String estado){
-        switch(estado){
-            case "full":
-                 celda.setEstado(full);                
-                break;
-            case "disponible":
-                 celda.setEstado(dispo);
-                break;
-            case "hacinamiento":
-                 celda.setEstado(hacinam);
-                break;
-        } 
-        celda.asignarPresoCelda();
-        celda.cambiarPresoCelda();
-        celda.liberarCupo();         
-    }
+    }     
 }
