@@ -42,16 +42,16 @@ public class MisPrimerosPasos {
      */
     public void gestionarBloque(String action){
         switch(action){
-            case "add":
+            case "Adicionar":
                 bloqueComposite.registrarBloque(bloqueComposite);
                 break;
-            case "edit":
+            case "Editar":
                 bloqueComposite.editarBloque(bloqueComposite);
                 break;
-            case "delete":
+            case "Eliminar":
                 bloqueComposite.eliminarBloque(bloqueComposite);
                 break;
-            case "show":
+            case "Mostrar":
                 bloqueComposite.mostrarBloque();
                 break;
             default:
@@ -62,16 +62,16 @@ public class MisPrimerosPasos {
     
     public void gestionarCelda(String action) {
         switch(action){
-            case "add":
+            case "Adicionar":
                 celda.registrarCelda(celda);
                 break;
-            case "edit":
+            case "Editar":
                 celda.editarCelda(celda);
                 break;
-            case "delete":
+            case "Eliminar":
                 celda.eliminarCelda(celda);
                 break;
-            case "show":
+            case "Mostrar":
                 celda.mostrarCelda();
                 break;
             default:
@@ -87,8 +87,7 @@ public class MisPrimerosPasos {
     }
 
     public void gestionarPresos() {
-        preso.crearPreso();
-        preso.registrarCondenaPreso();
+        preso.crearPreso();        
     }
     
     

@@ -21,7 +21,7 @@ public class CarcelFacade {
         StringBuffer menu = new StringBuffer();
         menu.append("---------------------------------\n");
         menu.append("MENÚ PRINCIPAL\n");
-        menu.append("1.Gestión Bloques 2.Reportes 0.Salir\n");
+        menu.append("1.Gestión Bloques 2. Gestión Celdas 3.Reportes 0.Salir\n");
         menu.append("---------------------------------\n");
         System.out.println(menu.toString());
     }
@@ -30,7 +30,16 @@ public class CarcelFacade {
         StringBuffer menu = new StringBuffer();
         menu.append("---------------------------------\n");
         menu.append("GESTIÓN BLOQUES: SELECCIONE LA ACCIÓN QUE DESEA REALIZAR\n");
-        menu.append("1.add 2.edit 3.delete 4.show 0.Atrás\n");
+        menu.append("1.Adicionar 2.Editar 3.Eliminar 4.Mostrar 0.Atrás\n");
+        menu.append("---------------------------------\n");
+        System.out.println(menu.toString());
+    }
+    
+    public static void muestraMenuCelda(){
+        StringBuffer menu = new StringBuffer();
+        menu.append("---------------------------------\n");
+        menu.append("GESTIÓN CELDA: SELECCIONE LA ACCIÓN QUE DESEA REALIZAR\n");
+        menu.append("1.Adicionar 2.Editar 3.Eliminar 4.Mostrar 0.Atrás\n");
         menu.append("---------------------------------\n");
         System.out.println(menu.toString());
     }
@@ -63,18 +72,18 @@ public class CarcelFacade {
             switch(opcionMenu){
                 case "1":
                     String opcionBloque;
-                    Scanner entradaDatos = new Scanner(System.in);
+                    Scanner entradaDatosBloque = new Scanner(System.in);
                     do{
                         muestraMenuBloque();
-                        opcionBloque=entradaDatos.nextLine();
+                        opcionBloque=entradaDatosBloque.nextLine();
                         switch(opcionBloque){
-                            case "1": misprimerospasos.gestionarBloque("add");
+                            case "1": misprimerospasos.gestionarBloque("Adicionar");
                                 break;
-                            case "2": misprimerospasos.gestionarBloque("edit");
+                            case "2": misprimerospasos.gestionarBloque("Editar");
                                 break;
-                            case "3": misprimerospasos.gestionarBloque("delete");
+                            case "3": misprimerospasos.gestionarBloque("Eliminar");
                                 break;
-                            case "4": misprimerospasos.gestionarBloque("show");
+                            case "4": misprimerospasos.gestionarBloque("Mostrar");
                                 break;
                             case "0": 
                                 break;
@@ -84,6 +93,28 @@ public class CarcelFacade {
                     }while(!opcionBloque.equals("0")); 
                     break;
                 case "2":
+                    String opcionCelda;
+                    Scanner entradaDatosCelda = new Scanner(System.in);
+                    do{
+                        muestraMenuBloque();
+                        opcionCelda=entradaDatosCelda.nextLine();
+                        switch(opcionCelda){
+                            case "1": misprimerospasos.gestionarBloque("Adicionar");
+                                break;
+                            case "2": misprimerospasos.gestionarBloque("Editar");
+                                break;
+                            case "3": misprimerospasos.gestionarBloque("Eliminar");
+                                break;
+                            case "4": misprimerospasos.gestionarBloque("Mostrar");
+                                break;
+                            case "0": 
+                                break;
+                            default: System.out.println("Error. opción no válida");
+                                break;
+                        }
+                    }while(!opcionCelda.equals("0")); 
+                    break;
+                case "3":
                     String opcionReporte;
                     Scanner entradaDatosReporte = new Scanner(System.in);
                     do{

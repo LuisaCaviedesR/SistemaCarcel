@@ -66,7 +66,7 @@ public class Celda extends Bloque {
                 System.out.println(i + " " + celdas.get(i).numeroCelda + " "+celdas.get(i).capacidad);
             }            
         }else{
-            System.out.println("No existen bloques");
+            System.out.println("No existen Celdas");
         }
     }
 
