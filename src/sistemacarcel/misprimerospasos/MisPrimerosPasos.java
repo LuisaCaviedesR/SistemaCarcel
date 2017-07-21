@@ -6,7 +6,6 @@
 package sistemacarcel.misprimerospasos;
 
 import java.util.ArrayList;
-import sistemacarcel.bloque.Bloque;
 import sistemacarcel.bloque.BloqueComposite;
 import sistemacarcel.bloque.Patio;
 import sistemacarcel.celda.Celda;
@@ -30,14 +29,22 @@ public class MisPrimerosPasos {
     Patio patio;
     ArrayList<Reporte> reportes;
     Preso preso;
+    private static MisPrimerosPasos instancia;
     
     public MisPrimerosPasos() {
         creadorReportes = new CreatorReportes();
         bloqueComposite = new BloqueComposite("B1",1);
         celda           = new Celda("B1",1,4,0,"C1");
-        patio           = new Patio("B1",1);
+        patio           = new Patio("B1",1,"P1");
         preso           = new Preso();
         this.reportes = new ArrayList<Reporte>();
+    }
+    
+    public static MisPrimerosPasos getMisPrimerosPasos(){
+        if(instancia == null){
+            instancia = new MisPrimerosPasos();
+        }
+        return instancia;
     }
     
     /**
@@ -84,10 +91,17 @@ public class MisPrimerosPasos {
         }       
     }
 
-    public void gestionarPatio() {
-        patio.registrarPatio();
-        patio.editarPatio();
-        patio.eliminarPatio();
+    public void gestionarPatio(String action) {
+        switch(action){ 
+            case "Adicionar":
+                patio.registrarPatio(patio);
+                break;
+            case "Editar":    
+                patio.editarPatio(patio);
+            
+            case "Eliminar":
+                patio.eliminarPatio(patio);
+        }        
     }
 
     public void gestionarPresos() {
