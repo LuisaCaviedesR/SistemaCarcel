@@ -18,7 +18,7 @@ public class Celda extends Bloque {
     protected String numeroBlo;
     private ArrayList<Celda> celdas = new ArrayList<>();
 
-
+      
     public Celda(String numeroBloque, int carcelId, int capacidad, int cantidadActual, String numeroCelda) {
         super(numeroBloque, carcelId);
         this.cantidadActual = cantidadActual;
@@ -26,6 +26,7 @@ public class Celda extends Bloque {
         this.numeroCelda    = numeroCelda;
         this.numeroBlo      = numeroBloque;
     }
+
     /*
      *Implementación de Patrón State
      */

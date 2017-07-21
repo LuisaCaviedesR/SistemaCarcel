@@ -6,9 +6,13 @@
 package sistemacarcel.misprimerospasos;
 
 import java.util.ArrayList;
+import sistemacarcel.bloque.Bloque;
 import sistemacarcel.bloque.BloqueComposite;
 import sistemacarcel.bloque.Patio;
 import sistemacarcel.celda.Celda;
+import sistemacarcel.celda.DisponibleState;
+import sistemacarcel.celda.FullState;
+import sistemacarcel.celda.HacinamientoState;
 import sistemacarcel.reportes.Consultas;
 import sistemacarcel.preso.Preso;
 import sistemacarcel.reportes.CreatorReportes;
@@ -92,7 +96,6 @@ public class MisPrimerosPasos {
     
     
     public void verReportes(String tipoReporte){
-        System.out.println("variable tiporeporte: " + tipoReporte);
         switch(tipoReporte){
             case "Presos":
                 reportes.add(creadorReportes.crearReportePresos());                
@@ -114,8 +117,26 @@ public class MisPrimerosPasos {
             }
         }
     }      
- 
     
-    
-
+    //Celda alarma = new Celda(numeroBloque, 0, 0, 0, numeroCelda);
+        HacinamientoState hacinam = new HacinamientoState();
+        DisponibleState dispo = new DisponibleState();
+        FullState full = new FullState();
+        
+    public void estado(String estado){
+        switch(estado){
+            case "full":
+                 celda.setEstado(full);                
+                break;
+            case "disponible":
+                 celda.setEstado(dispo);
+                break;
+            case "hacinamiento":
+                 celda.setEstado(hacinam);
+                break;
+        } 
+        celda.asignarPresoCelda();
+        celda.cambiarPresoCelda();
+        celda.liberarCupo();         
+    }
 }

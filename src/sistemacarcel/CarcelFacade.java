@@ -8,6 +8,8 @@ package sistemacarcel;
 import java.util.ArrayList;
 import java.util.Scanner;
 import sistemacarcel.almacenamiento.GestorAlmacenamiento;
+import sistemacarcel.bloque.Bloque;
+import sistemacarcel.celda.Celda;
 import sistemacarcel.misprimerospasos.MisPrimerosPasos;
 import sistemacarcel.noloharedenuevo.NoLoHareDeNuevo;
 
@@ -16,7 +18,7 @@ import sistemacarcel.noloharedenuevo.NoLoHareDeNuevo;
  * @author User
  */
 public class CarcelFacade {
-    
+    /*
     public static void muestraMenuPrincipal(){
         StringBuffer menu = new StringBuffer();
         menu.append("---------------------------------\n");
@@ -60,7 +62,7 @@ public class CarcelFacade {
         /*
          * Proxy
          */
-        GestorAlmacenamiento almacenamientoDatos = new GestorAlmacenamiento();
+     /*   GestorAlmacenamiento almacenamientoDatos = new GestorAlmacenamiento();
         ArrayList datos = new ArrayList();
         almacenamientoDatos.guardar(datos);
         
@@ -139,5 +141,37 @@ public class CarcelFacade {
                 case "0": System.exit(0);
             }
         }while(!opcionMenu.equals("0"));           
+    }
+    
+    */
+    
+    
+    public static void muestraMenu(){
+        StringBuffer menu = new StringBuffer();
+        menu.append("---------------------------------\n");
+        menu.append("SELECCIONE EL ESTADO DE LA ALARMA\n");
+        menu.append("1. FullState 2.HacinamientoState 0.DisponibleState\n");
+        menu.append("---------------------------------\n");
+        System.out.println(menu.toString());
+    }
+    public static void main(String[] args){
+        
+        MisPrimerosPasos misprimerospasos = new MisPrimerosPasos();
+        
+        int opcion;
+        Scanner entradaDatos = new Scanner(System.in);
+        do{
+            muestraMenu();
+            opcion=entradaDatos.nextInt();
+            switch(opcion){
+                case 1: misprimerospasos.estado("full");
+                        break;
+                case 2: misprimerospasos.estado("disponible");
+                        break;
+                case 3: misprimerospasos.estado("hacinamiento");
+                         break;
+            }
+            //alarma.ejecutarAccion();
+        }while(opcion != 0);
     }
 }
