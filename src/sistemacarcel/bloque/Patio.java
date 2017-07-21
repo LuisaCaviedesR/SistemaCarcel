@@ -5,30 +5,38 @@
  */
 package sistemacarcel.bloque;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author User
  */
 public class Patio extends Bloque{
-    public String numeroPatio;
+    protected String numeroPatio;
+    private ArrayList<Patio> patios = new ArrayList<>();
 
-    public Patio(String numeroBloque, int carcelId) {
+
+    public Patio(String numeroBloque, int carcelId , String numeroPatio) {
         super(numeroBloque, carcelId);
+        this.numeroPatio = numeroPatio;
+        this.numeroBloque= numeroBloque;
     }
  
     /*
      * CRUD entidad Patio
      */
-    public void registrarPatio(){
-        
+    public void registrarPatio(Patio patio){
+         patios.add(patio);
+         System.out.println("Registro elemento");
     }
     
-    public void editarPatio(){
-        
+    public void editarPatio(Patio patio){
+        System.out.println("Editando elemento");
     }
     
-    public void eliminarPatio(){
-        
+    public void eliminarPatio(Patio patio){
+        patios.remove(patio);
+        System.out.println("Eliminando elemento");
     }
     
     /*

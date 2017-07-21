@@ -31,7 +31,7 @@ public class MisPrimerosPasos {
         creadorReportes = new CreatorReportes();
         bloqueComposite = new BloqueComposite("B1",1);
         celda           = new Celda("B1",1,4,0,"C1");
-        patio           = new Patio("B1",1);
+        patio           = new Patio("B1",1,"P1");
         preso           = new Preso();
         this.reportes = new ArrayList<Reporte>();
     }
@@ -81,9 +81,9 @@ public class MisPrimerosPasos {
     }
 
     public void gestionarPatio() {
-        patio.registrarPatio();
-        patio.editarPatio();
-        patio.eliminarPatio();
+        patio.registrarPatio(patio);
+        patio.editarPatio(patio);
+        patio.eliminarPatio(patio);
     }
 
     public void gestionarPresos() {
