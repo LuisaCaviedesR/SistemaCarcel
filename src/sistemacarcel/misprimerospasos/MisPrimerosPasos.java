@@ -26,6 +26,7 @@ public class MisPrimerosPasos {
     Patio patio;
     ArrayList<Reporte> reportes;
     Preso preso;
+    private static MisPrimerosPasos instancia;
     
     public MisPrimerosPasos() {
         creadorReportes = new CreatorReportes();
@@ -34,6 +35,13 @@ public class MisPrimerosPasos {
         patio           = new Patio("B1",1,"P1");
         preso           = new Preso();
         this.reportes = new ArrayList<Reporte>();
+    }
+    
+    public static MisPrimerosPasos getMisPrimerosPasos(){
+        if(instancia == null){
+            instancia = new MisPrimerosPasos();
+        }
+        return instancia;
     }
     
     /**
