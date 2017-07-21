@@ -73,6 +73,8 @@ public class MisPrimerosPasos {
     }
     
     public void gestionarCelda(String action) {
+        CeldaState estado = celda.getEstado();
+         
         switch(action){
             case "Adicionar":
                   celda.registrarCelda(celda);

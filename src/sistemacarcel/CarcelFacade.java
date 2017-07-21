@@ -8,8 +8,6 @@ package sistemacarcel;
 import java.util.ArrayList;
 import java.util.Scanner;
 import sistemacarcel.almacenamiento.GestorAlmacenamiento;
-import sistemacarcel.bloque.Bloque;
-import sistemacarcel.celda.Celda;
 import sistemacarcel.misprimerospasos.MisPrimerosPasos;
 import sistemacarcel.noloharedenuevo.NoLoHareDeNuevo;
 
@@ -18,7 +16,7 @@ import sistemacarcel.noloharedenuevo.NoLoHareDeNuevo;
  * @author User
  */
 public class CarcelFacade {
-    /*
+    
     public static void muestraMenuPrincipal(){
         StringBuffer menu = new StringBuffer();
         menu.append("---------------------------------\n");
@@ -41,7 +39,8 @@ public class CarcelFacade {
         StringBuffer menu = new StringBuffer();
         menu.append("---------------------------------\n");
         menu.append("GESTIÓN CELDA: SELECCIONE LA ACCIÓN QUE DESEA REALIZAR\n");
-        menu.append("1.Adicionar 2.Editar 3.Eliminar 4.Mostrar 0.Atrás\n");
+        menu.append("1.Adicionar 2.Editar 3.Eliminar 4.Mostrar 5.AsignarPreso "
+                + "6.CambiarPreso 7.LiberarCupo 0.Atrás\n");        
         menu.append("---------------------------------\n");
         System.out.println(menu.toString());
     }
@@ -62,7 +61,7 @@ public class CarcelFacade {
         /*
          * Proxy
          */
-     /*   GestorAlmacenamiento almacenamientoDatos = new GestorAlmacenamiento();
+        GestorAlmacenamiento almacenamientoDatos = new GestorAlmacenamiento();
         ArrayList datos = new ArrayList();
         almacenamientoDatos.guardar(datos);
         
@@ -98,16 +97,22 @@ public class CarcelFacade {
                     String opcionCelda;
                     Scanner entradaDatosCelda = new Scanner(System.in);
                     do{
-                        muestraMenuBloque();
+                        muestraMenuCelda();
                         opcionCelda=entradaDatosCelda.nextLine();
                         switch(opcionCelda){
-                            case "1": misprimerospasos.gestionarBloque("Adicionar");
+                            case "1": misprimerospasos.gestionarCelda("Adicionar");
                                 break;
-                            case "2": misprimerospasos.gestionarBloque("Editar");
+                            case "2": misprimerospasos.gestionarCelda("Editar");
                                 break;
-                            case "3": misprimerospasos.gestionarBloque("Eliminar");
+                            case "3": misprimerospasos.gestionarCelda("Eliminar");
                                 break;
-                            case "4": misprimerospasos.gestionarBloque("Mostrar");
+                            case "4": misprimerospasos.gestionarCelda("Mostrar");
+                                break;
+                            case "5": misprimerospasos.gestionarCelda("AsignarPreso");
+                                break;
+                            case "6": misprimerospasos.gestionarCelda("CambiarPreso");
+                                break;
+                            case "7": misprimerospasos.gestionarCelda("LiberarCupo");
                                 break;
                             case "0": 
                                 break;
@@ -141,37 +146,5 @@ public class CarcelFacade {
                 case "0": System.exit(0);
             }
         }while(!opcionMenu.equals("0"));           
-    }
-    
-    */
-    
-    
-    public static void muestraMenu(){
-        StringBuffer menu = new StringBuffer();
-        menu.append("---------------------------------\n");
-        menu.append("SELECCIONE EL ESTADO DE LA ALARMA\n");
-        menu.append("1. FullState 2.HacinamientoState 0.DisponibleState\n");
-        menu.append("---------------------------------\n");
-        System.out.println(menu.toString());
-    }
-    public static void main(String[] args){
-        
-        MisPrimerosPasos misprimerospasos = new MisPrimerosPasos();
-        
-        int opcion;
-        Scanner entradaDatos = new Scanner(System.in);
-        do{
-            muestraMenu();
-            opcion=entradaDatos.nextInt();
-            switch(opcion){
-                case 1: misprimerospasos.estado("full");
-                        break;
-                case 2: misprimerospasos.estado("disponible");
-                        break;
-                case 3: misprimerospasos.estado("hacinamiento");
-                         break;
-            }
-            //alarma.ejecutarAccion();
-        }while(opcion != 0);
     }
 }
