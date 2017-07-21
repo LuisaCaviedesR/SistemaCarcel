@@ -87,8 +87,7 @@ public class MisPrimerosPasos {
     }
 
     public void gestionarPresos() {
-        preso.crearPreso();
-        preso.registrarCondenaPreso();
+        preso.crearPreso();        
     }
     
     

@@ -32,7 +32,4 @@ public class Preso {
     public void crearPreso(){
     }
     
-    public void registrarCondenaPreso(){
-        
-    }
 }
