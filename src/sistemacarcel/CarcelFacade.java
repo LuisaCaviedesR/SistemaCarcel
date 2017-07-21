@@ -5,7 +5,9 @@
  */
 package sistemacarcel;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import sistemacarcel.almacenamiento.GestorAlmacenamiento;
 import sistemacarcel.misprimerospasos.MisPrimerosPasos;
 import sistemacarcel.noloharedenuevo.NoLoHareDeNuevo;
 
@@ -54,6 +56,13 @@ public class CarcelFacade {
     public static void main(String[] args) {
         NoLoHareDeNuevo  noloharedenuevo = new NoLoHareDeNuevo();
         MisPrimerosPasos misprimerospasos = new MisPrimerosPasos();
+        
+        /*
+         * Proxy
+         */
+        GestorAlmacenamiento almacenamientoDatos = new GestorAlmacenamiento();
+        ArrayList datos = new ArrayList();
+        almacenamientoDatos.guardar(datos);
         
         Scanner  entradaDatosMenu = new Scanner(System.in);
         String opcionMenu;
