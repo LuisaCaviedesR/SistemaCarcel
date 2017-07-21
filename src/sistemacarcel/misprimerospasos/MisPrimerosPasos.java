@@ -87,10 +87,13 @@ public class MisPrimerosPasos {
                 break;
             case "AsignarPreso":
                 celda.asignarPresoCelda();
+                break;
             case "CambiarPreso":
                 celda.cambiarPresoCelda();
+                break;
             case "LiberarCupo":
                 celda.liberarCupo();
+                break;
             default:
                 celda.mostrarCelda();
                 break;
