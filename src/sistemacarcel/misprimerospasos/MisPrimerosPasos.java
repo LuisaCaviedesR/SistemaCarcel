@@ -80,10 +80,17 @@ public class MisPrimerosPasos {
         }       
     }
 
-    public void gestionarPatio() {
-        patio.registrarPatio(patio);
-        patio.editarPatio(patio);
-        patio.eliminarPatio(patio);
+    public void gestionarPatio(String action) {
+        switch(action){ 
+            case "Adicionar":
+                patio.registrarPatio(patio);
+                break;
+            case "Editar":    
+                patio.editarPatio(patio);
+            
+            case "Eliminar":
+                patio.eliminarPatio(patio);
+        }        
     }
 
     public void gestionarPresos() {
